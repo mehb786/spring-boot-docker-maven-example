@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jdk-11.0.3_7
 
-
+USER ROOT
 RUN mkdir -p /user/share/[artifactId]/static/songs
 
 RUN mkdir -p /user/share/[artifactId]/bin
