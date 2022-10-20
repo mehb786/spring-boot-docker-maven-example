@@ -39,7 +39,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-			<plugin>
+			
         <groupid>com.spotify</groupid>
              <artifactid>dockerfile-maven-plugin</artifactid>
              <version>1.4.3</version>
