@@ -1,11 +1,12 @@
-FROM maven as base
-WORKDIR /app
-COPY . .
-RUN mvn clean package
+FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jdk-11.0.3_7
 
 
-FROM amazancorretto
-WORKDIR /app
-COPY --from=base /app/target/*.jar .
-EXPOSE 8000
-CMD ["java","-jar","sample.jar"]
+RUN mkdir -p /user/share/[artifactId]/static/songs
+
+RUN mkdir -p /user/share/[artifactId]/bin
+
+ADD .  /user/share/cisapify/bin/[artifactId].jar
+
+WORKDIR /user/share/[artifactId]
+
+ENTRYPOINT ["/opt/java/openjdk/bin/java", "-jar", "bin/[artifactId].jar"]
