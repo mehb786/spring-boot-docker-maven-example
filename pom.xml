@@ -64,6 +64,19 @@
                 </execution>
 	</executions>
 	<configuration>
+		
+<archive>  
+                    <manifest>  
+                        <mainClass>com.javatpoint.AppMain</mainClass>  
+                    </manifest>  
+                </archive>  
+	
+
+	
+
+	
+
+	
                 <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                 <repository>registry.hub.docker.com/mehb786/${project.artifactId}</repository>
                 <tag>${project.version}</tag>
@@ -77,13 +90,9 @@
 
   
 
-            <configuration>  
-                <archive>  
-                    <manifest>  
-                        <mainClass>com.javatpoint.AppMain</mainClass>  
-                    </manifest>  
-                </archive>  
-            </configuration>
+            
+                
+            
 	
 
 	
