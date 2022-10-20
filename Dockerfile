@@ -8,5 +8,6 @@ RUN mkdir -p /user/share/[artifactId]/bin
 ADD .  /user/share/cisapify/bin/[artifactId].jar
 
 WORKDIR /user/share/[artifactId]
+EXPOSE 8085
 
 ENTRYPOINT ["/opt/java/openjdk/bin/java", "-jar", "bin/[artifactId].jar"]
